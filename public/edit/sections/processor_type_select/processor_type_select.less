@@ -1,0 +1,26 @@
+@import (reference) "~ui/styles/variables";
+@import (reference) "~ui/styles/mixins";
+@import (reference) "~ui/styles/theme";
+
+processor-type-select {
+  display: block;
+
+  .ui-select-container {
+    .ui-select-choices-row {
+      .processor-help-text {
+        color: @kibanaGray3;
+        font-size: 0.9em;
+
+        span {
+          white-space: normal;
+        }
+      }
+    }
+
+    .ui-select-choices-row.active {
+      .processor-help-text {
+        color: @white;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<h3>Pipeline</h3>
+
+<section-collapser
+  class="collapser-compact"
+  title="Input"
+  collapsed="pipelineProcessors.detailState.input.collapsed"
+  ng-class="{ expanded: !pipelineProcessors.detailState.input.collapsed }">
+</section-collapser>
+<pipeline-input
+  pipeline="pipeline"
+  pipeline-processors="pipelineProcessors"
+  ng-hide="pipelineProcessors.detailState.input.collapsed">
+</pipeline-input>
+
+<section-collapser
+  class="collapser-compact"
+  title="Output"
+  collapsed="pipelineProcessors.detailState.output.collapsed"
+  ng-class="{ expanded: !pipelineProcessors.detailState.output.collapsed }">
+</section-collapser>
+<div ng-hide="pipelineProcessors.detailState.output.collapsed">
+  <pipeline-output
+    pipeline="pipeline"
+    ng-hide="pipeline.error">
+  </pipeline-output>
+  <pipeline-error
+    pipeline="pipeline"
+    ng-show="pipeline.error">
+  </pipeline-error>
+</div>

@@ -1,0 +1,33 @@
+@import (reference) "~ui/styles/variables";
+@import (reference) "~ui/styles/mixins";
+@import (reference) "~ui/styles/theme";
+
+document-viewer {
+  display: block;
+  margin-bottom: 10px;
+
+  .visual {
+    padding: 9.5px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    border: 1px solid #cccccc;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    overflow-x: auto;
+
+    /**
+     * 1. Force long unbroken lines to wrap.
+     */
+    pre {
+      background-color: transparent;
+      border: none;
+      white-space: pre-wrap; // 1
+      word-wrap: break-word; // 1
+    }
+  }
+}
+
+document-viewer.hide-unchanged {
+  .jsondiffpatch-unchanged {
+    display: none;
+  }
+}

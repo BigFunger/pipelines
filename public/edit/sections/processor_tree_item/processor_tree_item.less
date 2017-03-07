@@ -1,0 +1,15 @@
+@import (reference) "~ui/styles/variables";
+@import (reference) "~ui/styles/mixins";
+@import (reference) "~ui/styles/theme";
+
+processor-tree-item {
+  display: block;
+}
+
+processor-tree-item.active > .tree-item {
+  background-color: @kibanaGray5;
+
+  .buttons {
+    display: block;
+  }
+}

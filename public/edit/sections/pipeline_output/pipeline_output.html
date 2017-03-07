@@ -1,0 +1,13 @@
+<tertiary-nav
+  class="simple"
+  options="pipelineProcessors.docModes"
+  option="pipelineProcessors.detailState.output.docMode">
+</tertiary-nav>
+<document-viewer
+  states="pipelineOutput.docStates"
+  ng-show="pipelineProcessors.detailState.output.docMode === pipelineProcessors.docModes.document">
+</document-viewer>
+<document-viewer
+  states="pipelineOutput.metaStates"
+  ng-show="pipelineProcessors.detailState.output.docMode === pipelineProcessors.docModes.meta">
+</document-viewer>

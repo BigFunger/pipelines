@@ -1,0 +1,80 @@
+@import (reference) "~ui/styles/variables";
+@import (reference) "~ui/styles/mixins";
+@import (reference) "~ui/styles/theme";
+
+pipeline-edit {
+  .pipeline-edit {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  //*************************** ui-select-tweaks
+  .ui-select-bootstrap > .ui-select-choices {
+    max-height: 350px;
+  }
+
+  // Temporary bug fix - https://github.com/angular-ui/ui-select/issues/1575
+  .ui-select-search {
+    width: 100% !important;
+  }
+
+  .ui-select-container {
+    .btn-default {
+      color: #000;
+    }
+
+    .form-control {
+      background-color: #ffffff;
+    }
+
+    .form-control:active {
+      background-color: #ffffff;
+    }
+
+    .dropdown-menu {
+      .box-shadow(0 2px 4px rgba(0,0,0,0.175));
+    }
+
+    .ui-select-choices-row {
+      border-bottom: solid 1px;
+      border-bottom-color: @kibanaBlue5;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+    .ui-select-choices-row > a{
+      padding: 6px 12px;
+      white-space: normal;
+    }
+
+    .ui-select-placeholder {
+      color:  @kibanaGray1;
+    }
+
+    .ui-select-search {
+      color: @white;
+
+      &::placeholder {
+        color: @white;
+      }
+    }
+  }
+
+  .ui-select-container.ng-invalid.ng-dirty,
+  .ui-select-container.ng-invalid.ng-touched,
+  {
+    .form-control {
+      border-color: #E74C3C !important;
+    }
+  }
+  //*************************** end ui-select-tweaks
+
+  //*************************** ace editor tweaks
+  .ace_editor.ng-invalid.ng-dirty,
+  .ace_editor.ng-invalid.ng-touched {
+    border: 2px solid;
+    border-color: #E74C3C !important;
+  }
+  //*************************** end ace editor tweaks
+}

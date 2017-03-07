@@ -1,0 +1,42 @@
+@import (reference) "~ui/styles/variables";
+@import (reference) "~ui/styles/mixins";
+@import (reference) "~ui/styles/theme";
+
+section-collapser {
+  display: block;
+
+  .section-collapser-heading {
+    border-bottom: 2px solid @kibanaGray5;
+    margin-bottom: 15px;
+  }
+
+  .section-collapser-heading.expanded.compact {
+    margin-bottom: 0px;
+  }
+
+  label {
+    margin-bottom: 0px;
+  }
+
+  button.btn,
+  button.btn:active,
+  button.btn:focus,
+  button.btn:hover {
+    width: 15px;
+    background-color: transparent;
+    border-color: transparent;
+    color: @kibanaGray2;
+  }
+}
+
+section-collapser.collapser-compact {
+  .section-collapser-heading.expanded {
+    margin-bottom: 0px;
+  }
+}
+
+section-collapser.collapser-small {
+  .section-collapser-heading.expanded {
+    margin-bottom: 5px;
+  }
+}

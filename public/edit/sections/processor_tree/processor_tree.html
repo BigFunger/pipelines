@@ -1,0 +1,26 @@
+<div class="branch-header">On Data Error</div>
+<div
+  class="selectable-list"
+  draggable-container="processorTree.items">
+  <div
+    ng-repeat="item in processorTree.items"
+    draggable-item="item">
+
+    <pipeline-tree-item
+      pipeline="item"
+      expanded="true"
+      ng-if="item.constructor.name === 'Pipeline'"
+      root-processor-tree="processorTree.rootProcessorTree"
+      ng-class="{ active: processorTree.rootProcessorTree.selected === item }">
+    </pipeline-tree-item>
+
+    <processor-tree-item
+      processor-shell="item"
+      ng-if="item.constructor.name === 'ProcessorShell'"
+      root-processor-tree="processorTree.rootProcessorTree"
+      ng-class="{ active: processorTree.rootProcessorTree.selected === item }">
+    </processor-tree-item>
+
+  </div>
+</div>
+<div class="branch-footer"></div>

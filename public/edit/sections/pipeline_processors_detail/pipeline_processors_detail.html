@@ -1,0 +1,11 @@
+<processor-detail
+  processor-shell="pipelineProcessors.selectedProcessorShell"
+  pipeline="pipeline"
+  pipeline-processors="pipelineProcessors"
+  ng-show="pipelineProcessors.selectedProcessorShell">
+</processor-detail>
+<pipeline-detail
+  pipeline="pipelineProcessors.pipeline"
+  pipeline-processors="pipelineProcessors"
+  ng-show="pipelineProcessors.selectedItem === pipelineProcessors.pipeline">
+</pipeline-detail>
